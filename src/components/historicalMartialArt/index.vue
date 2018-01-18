@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'test',
+    name: 'martial_art',
     data () {
       return {
         msg: 'I am the second page'

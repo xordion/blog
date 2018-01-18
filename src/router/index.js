@@ -13,11 +13,32 @@ export default new Router({
       children: []
     },
     {
-      path:'/test',
-      name: 'test',
+      path:'/martial_art',
+      name: 'martial_art',
       component: function (resolve) {
-        require(['@/components/test'], resolve)
+        require(['@/components/historicalMartialArt/index'], resolve)
       }
-    }
+    },
+    {
+      path:'/membership',
+      name: 'membership',
+      component: function (resolve) {
+        require(['@/components/membership/index'], resolve)
+      }
+    },
+    {
+      path:'/equipment',
+      name: 'equipment',
+      component: function (resolve) {
+        require(['@/components/equipment/index'], resolve)
+      }
+    },
+    {
+      path:'/contact_us',
+      name: 'contactUs',
+      component: function (resolve) {
+        require(['@/components/contactUs/index'], resolve)
+      }
+    },
   ]
 })
