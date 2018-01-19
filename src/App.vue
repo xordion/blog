@@ -1,25 +1,34 @@
 <template>
   <div id="app">
-    <div class="general_header">
-      Shanghai Historical Martial Art Club
-    </div>
-    <div class="general_options">
-      <div class="general_portal">
-        <router-link to="/">Home</router-link>
-      </div>
-      <div class="general_portal">
-        <router-link to="membership">membership</router-link>
-      </div>
-      <div class="general_portal">
-        <router-link to="martial_art">about HMA</router-link>
-      </div>
-      <div class="general_portal">
-        <router-link to="equipment">equipment</router-link>
-      </div>
-      <div class="general_portal">
-        <router-link to="contact_us">contact us</router-link>
-      </div>
-    </div>
+     <b-navbar toggleable="md" type="dark" variant="info">
+
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+      <b-navbar-brand href="#"><img class="logo_shma" src="./assets/logo.png" alt="logo"></b-navbar-brand>
+
+      <b-collapse is-nav id="nav_collapse">
+
+        <b-navbar-nav>
+          <b-nav-item to="/">Home</b-nav-item>
+          <b-nav-item to="membership">membership</b-nav-item>
+          <b-nav-item to="martial_art">about HMA</b-nav-item>
+          <b-nav-item to="equipment">equipment</b-nav-item>
+          <b-nav-item to="contact_us">contact us</b-nav-item>
+        </b-navbar-nav>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item-dropdown text="Lang" right>
+            <b-dropdown-item href="#">EN</b-dropdown-item>
+            <b-dropdown-item href="#">ES</b-dropdown-item>
+            <b-dropdown-item href="#">RU</b-dropdown-item>
+            <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+
+      </b-collapse>
+    </b-navbar>
+
     <router-view></router-view>
   </div>
 </template>
@@ -33,29 +42,9 @@ export default {
 <style>
 @import 'assets/style/normalize.css';
 
-  .general_header{
-    padding: 30px 10px;
-    height: 100px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 30px;
-    box-sizing: border-box;
-  }
-  .general_options{
-    display: flex;
-  }
-  .general_portal{
-    flex: 1;
-    background-color: #2e2e2e;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.62);
-  }
-  .general_portal>a {
-    display: block;
-    line-height: 50px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
+  .logo_shma{
+    width: 2rem;
+    height: 2rem;
   }
 
 
