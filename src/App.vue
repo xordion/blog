@@ -41,7 +41,7 @@ export default {
 
 <style>
 @import 'assets/style/normalize.css';
-
+@import "assets/style/bootstrap.min.css";
   .logo_shma{
     width: 2rem;
     height: 2rem;
