@@ -7,25 +7,45 @@
       </div>
     </div>
     <b-container class="main_content">
-      <h3>{{intro.title}}</h3>
-      <div>
-        <b-img src="https://lorempixel.com/1024/400/" fluid alt="Responsive image" />
+      <div v-for="item in homeData" :key="item.id">
+        <h3>{{item.title}}</h3>
+        <div>
+          <b-img :src="item.imgUrl" fluid alt="Responsive image" />
+        </div>
+        <p>{{item.introduction}}</p>
       </div>
-      <p>{{intro.paragraph}}</p>
-      <p>{{intro.paragraph}}</p>
+      
+      
     </b-container>
+
 
   </div>
 </template>
 
 <script>
-  const article = require('./home.data.js')[0].content;
+import Vue from 'vue';
+  
+//const article = require('./home.data.js')[0].content;
+  
+
 export default {
   name: 'Home',
-  data () {
+  data(){
     return {
-      msg: '',
-      intro: article
+      homeData: []
+    }
+  },
+
+  created: function(){
+    this.getParagraph();
+  },
+  methods:{
+    getParagraph(){
+      new Promise(()=>{
+        dpd.homepage.get((res, error)=>{
+          this.homeData = res;
+        })        
+      })
     }
   }
 }
@@ -72,5 +92,6 @@ export default {
     color: #666;
     font-size: 20px;
     padding-bottom: 1rem;
+    word-break: break-all;
   }
 </style>

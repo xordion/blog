@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"introduction": {
+			"name": "introduction",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "introduction",
+			"order": 0
+		},
+		"imgUrl": {
+			"name": "imgUrl",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "imgUrl",
+			"order": 1
+		},
+		"title": {
+			"name": "title",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "title",
+			"order": 2
+		}
+	}
+}
