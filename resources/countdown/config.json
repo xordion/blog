@@ -1,0 +1,53 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "name",
+			"order": 0
+		},
+		"rank": {
+			"name": "rank",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "rank",
+			"order": 1
+		},
+		"organization": {
+			"name": "organization",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "organization",
+			"order": 2
+		},
+		"achievement": {
+			"name": "achievement",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "achievement",
+			"order": 3
+		},
+		"win": {
+			"name": "win",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "win",
+			"order": 4
+		},
+		"loss": {
+			"name": "loss",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "loss",
+			"order": 5
+		}
+	}
+}

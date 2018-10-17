@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"zh": {
+			"name": "zh",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "zh",
+			"order": 0
+		},
+		"en": {
+			"name": "en",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "en",
+			"order": 1
+		},
+		"routerName": {
+			"name": "routerName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "routerName",
+			"order": 2
+		}
+	}
+}

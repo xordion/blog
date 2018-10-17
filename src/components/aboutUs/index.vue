@@ -1,12 +1,12 @@
 <template>
-  <div class="contact_us">
+  <div class="about_us">
     contact us
   </div>
 </template>
 
 <script>
   export default {
-    name: 'contact_us',
+    name: 'about_us',
     data () {
       return {
         msg: ''

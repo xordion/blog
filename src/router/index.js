@@ -34,10 +34,10 @@ export default new Router({
       }
     },
     {
-      path:'/contact_us',
-      name: 'contactUs',
+      path:'/about_us',
+      name: 'aboutUs',
       component: function (resolve) {
-        require(['@/components/contactUs/index'], resolve)
+        require(['@/components/aboutUs/index'], resolve)
       }
     },
   ]
