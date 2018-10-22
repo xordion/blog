@@ -1,0 +1,13 @@
+{
+	"type": "Collection",
+	"properties": {
+		"language": {
+			"name": "language",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "language",
+			"order": 0
+		}
+	}
+}

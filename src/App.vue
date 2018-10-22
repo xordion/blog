@@ -9,15 +9,21 @@
       <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav>
-          <b-nav-item v-for='channel in nav' :key='channel.id' :to="channel.routerName">{{language == 'zh' ? channel.zh: channel.en}}</b-nav-item>
+          <b-nav-item v-for='channel in nav' 
+          :key='channel.id' 
+          class="nav_link" 
+          exact-active-class='nav_link_active' 
+          :to="{path: channel.routerName, name: channel.routerName || 'Home'}" >
+            {{GLOBAL.language == 'zh' ? channel.zh: channel.en}}
+          </b-nav-item>
           
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown text="语言/Language" right>
-            <b-dropdown-item v-on:click='language = "en"'>EN</b-dropdown-item>
-            <b-dropdown-item v-on:click='language = "zh"'>中文</b-dropdown-item>
+            <b-dropdown-item v-on:click='switchLang("en")'>EN</b-dropdown-item>
+            <b-dropdown-item v-on:click='switchLang("zh")'>中文</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
 
@@ -33,20 +39,24 @@ export default {
   name: 'App',
   data(){
     return {
-      nav: [],
-      language: 'zh'
+      nav: []
     }
   },
   created: function(){
     this.getNav();
+    // this.getConfig(this);
+  },
+  watch:{
+
   },
   methods:{
     getNav(){
-      new Promise(()=>{
-        dpd.navigator.get((res, error)=>{
+      dpd.navigator.get((res, error)=>{
           this.nav = res;
-        })        
-      })
+        })
+    },
+    switchLang(lang){
+       this.GLOBAL.language = lang;
     }
   }
 }
@@ -59,7 +69,12 @@ export default {
     width: 2rem;
     height: 2rem;
   }
-
+  .nav_link{
+    color: rgba(255,255,255,.5);
+  }
+  .nav_link_active{
+    background-color: rgba(0, 0, 0, 0.301);
+  }
 
 </style>
 

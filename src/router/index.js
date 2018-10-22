@@ -35,7 +35,7 @@ export default new Router({
     },
     {
       path:'/about_us',
-      name: 'aboutUs',
+      name: 'about_us',
       component: function (resolve) {
         require(['@/components/aboutUs/index'], resolve)
       }

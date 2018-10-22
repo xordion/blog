@@ -5,7 +5,7 @@
 			"name": "introduction",
 			"type": "string",
 			"typeLabel": "string",
-			"required": false,
+			"required": true,
 			"id": "introduction",
 			"order": 0
 		},
@@ -24,6 +24,14 @@
 			"required": false,
 			"id": "title",
 			"order": 2
+		},
+		"introductionEn": {
+			"name": "introductionEn",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "introductionEn",
+			"order": 3
 		}
 	}
 }

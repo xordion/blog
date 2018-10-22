@@ -12,7 +12,7 @@
         <div>
           <b-img :src="item.imgUrl" fluid alt="Responsive image" />
         </div>
-        <p>{{item.introduction}}</p>
+        <p>{{GLOBAL.language == 'zh'? item.introduction: item.introductionEn}}</p>
       </div>
       
       
@@ -39,13 +39,13 @@ export default {
   created: function(){
     this.getParagraph();
   },
+
+
   methods:{
     getParagraph(){
-      new Promise(()=>{
-        dpd.homepage.get((res, error)=>{
+      dpd.homepage.get((res, error)=>{
           this.homeData = res;
-        })        
-      })
+        }) 
     }
   }
 }

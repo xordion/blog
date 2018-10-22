@@ -21,7 +21,7 @@
 			"name": "routerName",
 			"type": "string",
 			"typeLabel": "string",
-			"required": true,
+			"required": false,
 			"id": "routerName",
 			"order": 2
 		}
